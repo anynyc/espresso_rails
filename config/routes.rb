@@ -12,4 +12,12 @@ Rails.application.routes.draw do
   end
 
 
+  namespace :api do
+    ##POC routes no sessions
+    namespace :v1 do
+      resources :videos, only: [:index]
+      resources :favorites, only: [:index]
+    end
+  end
+
 end
