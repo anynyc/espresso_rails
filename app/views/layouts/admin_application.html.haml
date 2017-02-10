@@ -1,0 +1,328 @@
+!!!
+%html{style: "height:auto;"}
+  %head
+    %meta{:charset => "utf-8"}
+      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+        %title Red VOD | Dashboard
+        / Tell the browser to be responsive to screen width
+        %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}
+          / Bootstrap 3.3.5
+          %link{:href => "bootstrap/css/bootstrap.min.css", :rel => "stylesheet"}
+            / Font Awesome
+            %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css", :rel => "stylesheet"}
+              / Ionicons
+              %link{:href => "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css", :rel => "stylesheet"}
+                / jvectormap
+                %link{:href => "plugins/jvectormap/jquery-jvectormap-1.2.2.css", :rel => "stylesheet"}
+                  / Theme style
+                  %link{:href => "dist/css/AdminLTE.min.css", :rel => "stylesheet"}
+                    /
+                      AdminLTE Skins. Choose a skin from the css/skins
+                      folder instead of downloading all of them to reduce the load.
+                    %link{:href => "dist/css/skins/_all-skins.min.css", :rel => "stylesheet"}
+                      / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+                      / WARNING: Respond.js doesn't work if you view the page via file://
+                      /[if lt IE 9]
+                        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    = stylesheet_link_tag    'admin/application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'admin/application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body.hold-transition.skin-blue.sidebar-mini{style: 'background:#222d32;height:auto;'}
+    .messages-container
+    = render 'layouts/shared/admin/flash_messages'
+  .wrapper
+    %header.main-header
+      / Logo
+      %a.logo{:href => "#{admin_root_path}"}
+        / mini logo for sidebar mini 50x50 pixels
+        %span.logo-mini
+          %b> Espresso
+        / logo for regular state and mobile devices
+        %span.logo-lg
+          %b> Espresso
+      / Header Navbar: style can be found in header.less
+      %nav.navbar.navbar-static-top{:role => "navigation"}
+        / Sidebar toggle button
+        %a.sidebar-toggle{"data-toggle" => "offcanvas", :href => "#", :role => "button"}
+          %span.sr-only Toggle navigation
+        / Navbar Right Menu
+        .navbar-custom-menu
+          %ul.nav.navbar-nav
+            / User Account: style can be found in dropdown.less
+            %li.dropdown.user.user-menu{style: "list-style: none;"}
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#", style: "padding: 10px;" }
+                %img.user-image{:alt => "User Image", :src => image_path('goodgoodlogo.png')}
+                  %span.hidden-xs= "Mike Trumpf"
+              %ul.dropdown-menu
+                -# / User image
+                -# %li.user-header
+                -#   %img.img-circle{:alt => "User Image", :src => image_tag('goodgoodlogo.png')}
+                -#     %p
+                -#       Alexander Pierce - Web Developer
+                -#       %small Member since Nov. 2012
+                / Menu Body
+                -# %li.user-body
+                -#   .col-xs-4.text-center
+                -#     %a{:href => "#"} Followers
+                -#   .col-xs-4.text-center
+                -#     %a{:href => "#"} Sales
+                -#   .col-xs-4.text-center
+                -#     %a{:href => "#"} Friends
+                / Menu Footer
+                -# %li.user-footer
+                -#   .pull-left
+                -#     %a.btn.btn-default.btn-flat{:href => "#"} Profile
+                  .pull-right
+                    %a.btn.btn-default.btn-flat{:href => "#"} Sign out
+            / Control Sidebar Toggle Button
+            -# %li
+            -#   %a{"data-toggle" => "control-sidebar", :href => "#"}
+            -#     %i.fa.fa-gears
+    / Left side column. contains the logo and sidebar
+    %aside.main-sidebar
+      / sidebar: style can be found in sidebar.less
+      %section.sidebar
+        / Sidebar user panel
+        .user-panel{ :style => "height: 50px;" }
+          .pull-left.image
+            %img.img-circle{:alt => "User Image", :src => image_path('goodgoodlogo.png')}
+          .pull-left.info
+            %p= "Mike Trumpf"
+            %a{:href => "#"}
+        / /.search form
+        / sidebar menu: : style can be found in sidebar.less
+        %br
+        %br
+        %ul.sidebar-menu
+          %li.header MAIN NAVIGATION
+          %li.active.treeview
+            / %a{:href => "#"}
+            /   %i.fa.fa-dashboard
+            /   %span Management
+            /   %i.fa.fa-angle-left.pull-right
+            %ul.treeview-menu
+              %li
+                %a{:href => admin_videos_path}
+                  %i.fa.fa-calendar
+                  Videos
+
+
+
+      -#     %li.treeview
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-files-o
+      -#         %span Layout Options
+      -#         %span.label.label-primary.pull-right 4
+      -#       %ul.treeview-menu
+      -#         %li
+      -#           %a{:href => "pages/layout/top-nav.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Top Navigation
+      -#         %li
+      -#           %a{:href => "pages/layout/boxed.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Boxed
+      -#         %li
+      -#           %a{:href => "pages/layout/fixed.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Fixed
+      -#         %li
+      -#           %a{:href => "pages/layout/collapsed-sidebar.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Collapsed Sidebar
+      -#     %li
+      -#       %a{:href => "pages/widgets.html"}
+      -#         %i.fa.fa-th
+      -#         %span Widgets
+      -#         %small.label.pull-right.bg-green new
+      -#     %li.treeview
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-pie-chart
+      -#         %span Charts
+      -#         %i.fa.fa-angle-left.pull-right
+      -#       %ul.treeview-menu
+      -#         %li
+      -#           %a{:href => "pages/charts/chartjs.html"}
+      -#             %i.fa.fa-circle-o
+      -#             ChartJS
+      -#         %li
+      -#           %a{:href => "pages/charts/morris.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Morris
+      -#         %li
+      -#           %a{:href => "pages/charts/flot.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Flot
+      -#         %li
+      -#           %a{:href => "pages/charts/inline.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Inline charts
+      -#     %li.treeview
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-laptop
+      -#         %span UI Elements
+      -#         %i.fa.fa-angle-left.pull-right
+      -#       %ul.treeview-menu
+      -#         %li
+      -#           %a{:href => "pages/UI/general.html"}
+      -#             %i.fa.fa-circle-o
+      -#             General
+      -#         %li
+      -#           %a{:href => "pages/UI/icons.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Icons
+      -#         %li
+      -#           %a{:href => "pages/UI/buttons.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Buttons
+      -#         %li
+      -#           %a{:href => "pages/UI/sliders.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Sliders
+      -#         %li
+      -#           %a{:href => "pages/UI/timeline.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Timeline
+      -#         %li
+      -#           %a{:href => "pages/UI/modals.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Modals
+      -#     %li.treeview
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-edit
+      -#         %span Forms
+      -#         %i.fa.fa-angle-left.pull-right
+      -#       %ul.treeview-menu
+      -#         %li
+      -#           %a{:href => "pages/forms/general.html"}
+      -#             %i.fa.fa-circle-o
+      -#             General Elements
+      -#         %li
+      -#           %a{:href => "pages/forms/advanced.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Advanced Elements
+      -#         %li
+      -#           %a{:href => "pages/forms/editors.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Editors
+      -#     %li.treeview
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-table
+      -#         %span Tables
+      -#         %i.fa.fa-angle-left.pull-right
+      -#       %ul.treeview-menu
+      -#         %li
+      -#           %a{:href => "pages/tables/simple.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Simple tables
+      -#         %li
+      -#           %a{:href => "pages/tables/data.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Data tables
+      -#     %li
+      -#       %a{:href => "pages/calendar.html"}
+      -#         %i.fa.fa-calendar
+      -#         %span Calendar
+      -#         %small.label.pull-right.bg-red 3
+      -#     %li
+      -#       %a{:href => "pages/mailbox/mailbox.html"}
+      -#         %i.fa.fa-envelope
+      -#         %span Mailbox
+      -#         %small.label.pull-right.bg-yellow 12
+      -#     %li.treeview
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-folder
+      -#         %span Examples
+      -#         %i.fa.fa-angle-left.pull-right
+      -#       %ul.treeview-menu
+      -#         %li
+      -#           %a{:href => "pages/examples/invoice.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Invoice
+      -#         %li
+      -#           %a{:href => "pages/examples/profile.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Profile
+      -#         %li
+      -#           %a{:href => "pages/examples/login.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Login
+      -#         %li
+      -#           %a{:href => "pages/examples/register.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Register
+      -#         %li
+      -#           %a{:href => "pages/examples/lockscreen.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Lockscreen
+      -#         %li
+      -#           %a{:href => "pages/examples/404.html"}
+      -#             %i.fa.fa-circle-o
+      -#             404 Error
+      -#         %li
+      -#           %a{:href => "pages/examples/500.html"}
+      -#             %i.fa.fa-circle-o
+      -#             500 Error
+      -#         %li
+      -#           %a{:href => "pages/examples/blank.html"}
+      -#             %i.fa.fa-circle-o
+      -#             Blank Page
+      -#     %li.treeview
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-share
+      -#         %span Multilevel
+      -#         %i.fa.fa-angle-left.pull-right
+      -#       %ul.treeview-menu
+      -#         %li
+      -#           %a{:href => "#"}
+      -#             %i.fa.fa-circle-o
+      -#             Level One
+      -#         %li
+      -#           %a{:href => "#"}
+      -#             %i.fa.fa-circle-o
+      -#             Level One
+      -#             %i.fa.fa-angle-left.pull-right
+      -#           %ul.treeview-menu
+      -#             %li
+      -#               %a{:href => "#"}
+      -#                 %i.fa.fa-circle-o
+      -#                 Level Two
+      -#             %li
+      -#               %a{:href => "#"}
+      -#                 %i.fa.fa-circle-o
+      -#                 Level Two
+      -#                 %i.fa.fa-angle-left.pull-right
+      -#               %ul.treeview-menu
+      -#                 %li
+      -#                   %a{:href => "#"}
+      -#                     %i.fa.fa-circle-o
+      -#                     Level Three
+      -#                 %li
+      -#                   %a{:href => "#"}
+      -#                     %i.fa.fa-circle-o
+      -#                     Level Three
+      -#         %li
+      -#           %a{:href => "#"}
+      -#             %i.fa.fa-circle-o
+      -#             Level One
+      -#     %li
+      -#       %a{:href => "documentation/index.html"}
+      -#         %i.fa.fa-book
+      -#         %span Documentation
+      -#     %li.header LABELS
+      -#     %li
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-circle-o.text-red
+      -#         %span Important
+      -#     %li
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-circle-o.text-yellow
+      -#         %span Warning
+      -#     %li
+      -#       %a{:href => "#"}
+      -#         %i.fa.fa-circle-o.text-aqua
+      -#         %span Information
+      -# / /.sidebar
+    = yield
+    = render 'layouts/shared/admin/footer'

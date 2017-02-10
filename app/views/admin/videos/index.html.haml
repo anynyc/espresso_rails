@@ -1,0 +1,51 @@
+
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Videos
+      %small All Espresso Videos
+    %ol.breadcrumb
+      %li
+        %a{:href => admin_root_path}
+          %i.fa.fa-dashboard
+          Home
+      %li.active
+        %a{:href => admin_videos_path}
+          Videos
+  / Main content
+  %section.content
+    .row
+      .col-xs-12
+        .box
+          .box-header
+            %h3.box-title All Videos
+            .box-tools
+              %a{:href => new_admin_video_path}
+                %button.btn.btn-sm.btn-default
+                  %i.fa.fa-plus-circle
+              -# .input-group{:style => "width: 150px;"}
+              -#   %input.form-control.input-sm.pull-right{:name => "table_search", :placeholder => "Search", :type => "text"}
+              -#     .input-group-btn
+              -#       %button.btn.btn-sm.btn-default
+              -#         %i.fa.fa-search
+          / /.box-header
+          .box-body.table-responsive.no-padding
+            %table.table.table-hover
+              %tr
+                %th URL
+                %th Gif URL
+                %th Date
+                %th Headline
+                %th Main Emoji
+                %th Action
+              - @videos.each do |video|
+                %tr
+                  %td= video.video_url
+                  %td= video.date
+                  %td= video.gif_url
+                  %td= video.headline
+                  %td=video.emoji_one
+                  %td
+                    %span= link_to "", edit_admin_video_path(video), class: 'btn fa fa-pencil'
+                    %span= link_to "", admin_video_path(video), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn fa fa-trash'

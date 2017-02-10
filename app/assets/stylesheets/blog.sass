@@ -1,0 +1,415 @@
+#blog
+	#section-1
+		height: 500px
+		width: 100%
+		background-image: url("blog-bg.jpg")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		position: relative
+		overflow: hidden
+		padding-top: 10%
+
+		.overlay
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: rgba(0,0,0,0.7)
+			width: 100%
+			height: 100%
+			display: none
+
+		.col-10
+			float: left
+			width: 20%
+			height: 100%
+
+		.hero-l, .hero-r
+			float: left
+			width: 30%
+			height: 100%
+			position: relative
+			z-index: 100
+			padding-top: 7%
+
+			&.align-right
+				text-align: right
+
+			h1
+				color: white
+				font-size: 40px
+				font-weight: 400
+				font-family: $typewriter
+
+				&.margin-btm
+					margin-bottom: 20px
+
+			p
+				color: white
+
+				span
+					font-weight: 600
+
+			button
+				background: #F5A623
+				width: 175px
+				outline: none
+				border: 1px solid rgba(0, 0, 0, 0.08)
+				border-radius: 20px
+				color: white
+				font-size: 14px
+				box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.5)
+				height: 50px
+				border-radius: 50px
+
+				a
+					text-decoration: none
+					color: inherit
+
+	#section-2
+		background: $bg-black
+		width: 100%
+		padding-bottom: 10rem
+
+		.container
+			width: 90%
+			margin: 0 auto
+
+			.blog-top
+				padding: 1rem 1rem 0
+				overflow: hidden
+
+				.left
+					float: left
+
+					span, p
+						display: inline-block
+						color: white
+
+					span
+						font-size: 20px
+						padding-right: 10px
+
+					p
+						vertical-align: top
+
+				ul
+					float: right
+
+					li
+						display: inline
+						padding-right: 2rem
+						color: white
+						cursor: pointer
+
+						&:hover
+							color: $orange
+
+			.mobile-blog-top
+				display: none
+				padding-top: 20px
+				text-align: center
+
+				select
+					height: 50px
+					color: white
+					width: 95%
+					margin: 0 auto
+					border: 1px solid rgba(255, 255, 255, .2)
+					background: transparent
+					font-size: 13px
+					padding: 0 20px
+					background-image: url("select-arrow.png")
+					background-repeat: no-repeat
+					background-position: 95% 20px
+
+			.blog
+				width: 80%
+				padding-top: 5rem
+				padding-bottom: 5rem
+				margin: 0 auto
+				overflow: hidden
+
+				.post
+					float: left
+					width: 50%
+					height: 420px
+					padding: 0 1rem
+					margin-bottom: 50px
+
+					&:after
+						content: ""
+						display: table
+						clear: both
+
+					a
+						text-decoration: none
+						color: inherit
+						display: block
+
+						.post-inner
+							border: 1px solid #E2E9F0
+							background: white
+							border-radius: 4px
+
+							&:hover
+								box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.20)
+
+							img
+								width: 100%
+								height: 250px
+
+							.post-content
+								padding: 25px
+
+								p
+									padding: 10px 10px 0
+									font-size: 14px
+									color: $grey
+
+									&.show
+										display: inline-block
+										width: 100%
+										font-size: 20px
+										font-weight: 300
+										padding-bottom: 10px
+										height: 55px
+										overflow: hidden
+
+								button
+									display: inline-block
+									background: white
+									color: $orange
+									padding: 7px 15px
+									outline: none
+									border: 1px solid $orange
+									border-radius: 20px
+									font-size: 12px
+									vertical-align: top
+									margin-top: 15px
+
+									&:hover
+										background: $orange
+										color: white
+										cursor: pointer
+
+			.button-wrapper
+				width: 100%
+				text-align: center
+
+				button
+					display: inline-block
+					background: transparent
+					color: white
+					padding: 7px 15px
+					outline: none
+					border: 1px solid rgba(204, 204, 204, 0.3)
+					border-radius: 20px
+					font-size: 12px
+					vertical-align: top
+
+					&:hover
+						border: 1px solid $orange
+						cursor: pointer
+
+	#section-1-article
+		height: 700px
+		width: 100%
+		background-image: url("blog-bg.png")
+		background-size: cover
+		background-repeat: no-repeat
+		position: relative
+		overflow: hidden
+		padding-top: 15%
+		text-align: center
+
+		&.no-bg
+			background: none
+			padding: 0
+
+		.overlay
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: rgba(0,0,0,0.5)
+			width: 100%
+			height: 100%
+			display: none
+
+			&.z-index
+				z-index: 500
+
+		.hero-text
+			position: relative
+			color: white
+			z-index: 100
+
+			&.show
+				z-index: 0
+				height: 100%
+				width: 100%
+
+			h1
+				font-size: 55px
+				font-weight: 500
+				margin-bottom: 20px
+				font-family: $typewriter
+
+			.img-wrapper
+				height: 100%
+				width: 100%
+
+				.cover-img
+					width: 100%
+					height: 100%
+
+			.text-wrapper
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				right: 0
+				z-index: 1000
+				max-width: 800px
+				margin: 0 auto
+
+				h1
+					font-size: 60px
+					font-weight: 500
+					margin-bottom: 20px
+					font-family: $typewriter
+
+				.blog-show-date-wrapper
+					display: block
+					height: auto
+					width: auto
+					margin: 0 auto 20px
+
+					.blog-show-date
+						background-image: image-url("blog-show-date.png")
+						background-repeat: no-repeat
+						position: relative
+						background-position: center center
+						height: 75px
+						width: 70px
+						margin: 0 auto
+						position: relative
+						background-size: cover
+
+						.wrapper
+							height: 100%
+							width: 100%
+							padding: 5px 0
+
+							.blog-show-date-month
+								font-size: 12px
+								font-weight: 600
+								display: block
+								margin-bottom: 2px
+
+								&.date
+									font-size: 30px
+									font-family: $typewriter
+									font-weight: 500
+
+				p
+					display: inline-block
+					font-size: 15px
+					font-weight: 300
+
+					&.margin-top
+						margin-top: 20px
+
+					span
+						padding-left: 10px
+						font-weight: 500
+
+						&.bord-right
+							border-right: 1px solid white
+							padding-left: 0
+							padding-right: 5px
+
+
+	#section-2-article
+		background: #20202C
+		padding-bottom: 8rem
+
+		.container
+			width: 65%
+			margin: 0 auto
+			padding-top: 3rem
+			padding-bottom: 3rem
+
+			p
+				color: white
+				margin-bottom: 15px
+				line-height: 27px
+
+				&.italic
+					font-style: italic
+					font-size: 22px
+
+				span
+					color: $orange
+
+			.blog-bottom
+				width: 100%
+				margin-top: 5rem
+				border-top: 1px solid #34373A
+				border-bottom: 1px solid #34373A
+				height: 65px
+				overflow: hidden
+
+				.left
+					float: left
+					height: 100%
+					width: 50%
+					position: relative
+
+					.wrapper
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+
+						p
+							display: inline-block
+							margin: 0
+							padding: 0
+							line-height: normal
+							float: left
+							font-size: 14px
+
+						a
+							text-decoration: none
+
+							span
+								font-size: 20px
+								padding: 10px 10px 5px
+								color: white
+								border-radius: 25px
+
+								&.twitter
+									background: #55ACEE
+
+								&.facebook
+									background: #3B5998
+									margin: 0 10px
+
+				.right
+					float: right
+					height: 100%
+					width: 50%
+					position: relative
+
+					.wrapper
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: 0
+
+						img
+							padding: 0 10px

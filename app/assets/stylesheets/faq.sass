@@ -1,0 +1,93 @@
+#faq
+	#section-1
+		height: 250px
+		background: #4CA576
+		width: 100%
+		position: relative
+
+		ul
+			width: 100%
+			margin: 0 auto
+			text-align: center
+			position: absolute
+			bottom: 30px
+			z-index: 100
+
+			li
+				display: inline
+				margin-right: 3rem
+				color: #fff
+				font-size: 14px
+				color: #9AE6BE
+				padding-bottom: 30px
+				position: relative
+
+				&:hover
+					cursor: pointer
+
+				&.arrow-down
+					color: white
+
+					&:after
+						content: ""
+						position: absolute
+						width: 0
+						height: 0
+						background: #4CA576
+						bottom: -7px
+						left: 50%
+						margin-left: -12px
+						border-left: 7px solid $bg-black
+						border-right: 7px solid $bg-black
+						border-top: 7px solid transparent
+
+		img
+			position: absolute
+			right: 0
+			bottom: -175px
+
+		.mobile-blog-top
+			display: none
+			position: absolute
+			text-align: center
+			bottom: 10px
+			width: 100%
+
+			select
+				height: 50px
+				color: white
+				width: 95%
+				margin: 0 auto
+				border: 1px solid rgba(255, 255, 255, .2)
+				background: transparent
+				font-size: 13px
+				padding: 0 20px
+				background-image: url("select-arrow.png")
+				background-repeat: no-repeat
+				background-position: 95% 20px
+
+	#section-2
+		background: $bg-black
+		width: 100%
+		padding: 7rem 0 10rem
+
+		.container
+			width: 75%
+			margin: 0 auto
+
+			h3
+				color: $faq-text
+				font-size: 14px
+				padding-bottom: 30px
+
+			p
+				color: white
+				padding-bottom: 30px
+				font-size: 20px
+				font-weight: 200
+				line-height: 30px
+				font-family: $base-font
+
+			a
+				color: #F5A623
+				text-decoration: none

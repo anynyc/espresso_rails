@@ -1,0 +1,203 @@
+#artist
+	#section-1
+		height: 900px
+		width: 100%
+		position: relative
+		background: $bg-black
+		background-image: url(artist-index-bg.png)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		overflow: hidden
+
+		.inner-section
+			width: 90%
+			margin: 0 auto
+
+			.schedule
+				width: 25%
+				float: left
+				margin: 7rem auto
+				text-align: center
+				padding-top: 5rem
+
+				.sponsor
+					width: 100%
+					border-radius: 2px
+					padding: 20px
+
+					p
+						font-size: 14px
+						color: white
+						padding: 0 10px
+						margin-bottom: 20px
+
+				.acts
+					margin-top: 1rem
+
+					h5
+						font-size: 17px
+						color: $orange
+						margin-bottom: 3px
+
+					h3
+						color: white
+						margin-bottom: 30px
+
+	#section-1-show
+		height: 600px
+		width: 100%
+		background-image: url(artist-show-bg.png)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		position: relative
+
+		.artist-info
+			text-align: left
+			width: 80%
+			margin: 0 auto
+			color: white
+			padding-top: 15%
+
+			h1
+				font-family: $typewriter
+				font-size: 60px
+				font-weight: 500
+				margin-bottom: 10px
+
+			h5
+				font-size: 14px
+				color: $orange
+
+			.socials
+				margin-top: 3rem
+
+				span
+					padding-right: 10px
+					font-size: 20px
+
+		.info-wrapper
+			position: absolute
+			bottom: -55px
+			left: 0
+			right: 0
+			background: $orange
+			height: 75px
+			width: 100%
+			text-align: center
+			padding-top: 10px
+			text-transform: uppercase
+
+			ul
+				margin-top: 1rem
+				display: inline-block
+				vertical-align: -webkit-baseline-middle
+				padding-right: 1rem
+
+				li
+					border-right: 1px solid white
+					color: white
+					font-weight: 500
+					display: inline-block
+					padding: 0 10px
+					font-size: 16px
+
+					&:last-child
+						border-right: none
+
+			.buttons-wrapper
+				display: inline-block
+
+				button
+					display: inline-block
+					background: transparent
+					color: white
+					padding: 15px 40px
+					outline: none
+					border: 1px solid white
+					border-radius: 50px
+					font-size: 15px
+					vertical-align: top
+					margin: 0 3px
+
+					&:hover
+						// background: $orange
+						// color: white
+						cursor: pointer
+
+					a
+						color: inherit
+						text-decoration: none
+
+	#section-2-show
+		width: 100%
+		background: white
+		overflow: hidden
+		padding-top: 8rem
+
+		.bio, .songs
+			width: 50%
+			float: left
+			height: 100%
+
+		.songs
+			width: 0
+
+		.bio-wrapper
+			width: 100%
+			max-width: 1200px
+			margin: auto
+			overflow: hidden
+
+		.video
+			width: 40%
+			float: left
+
+		.bio
+			width: 60%
+			max-width: 1200px
+			margin: auto
+			float: left
+			padding: 1rem 2rem
+			line-height: 30px
+
+			h3
+				font-size: 15px
+				margin: 0 0 20px
+
+			p
+				font-size: 15px
+				font-weight: 200
+				color: $grey
+				margin: 0 0 20px
+				line-height: 30px
+
+		.songs
+
+			h5
+				margin-bottom: 1rem
+				font-size: 13px
+				font-weight: 500
+
+				span
+					font-weight: 600
+
+		.crowd
+			padding-top: 3rem
+
+		.image-wrapper
+			width: 100%
+			max-width: 1450px
+			position: relative
+			overflow: hidden
+			margin-top: -5px
+
+			.image
+				float: left
+				width: 20%
+				height: 300px
+
+				img
+					height: 100%
+					width: 100%

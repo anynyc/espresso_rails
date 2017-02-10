@@ -1,0 +1,596 @@
+#shopping
+	#section-1
+		width: 100%
+		background: #354395
+		height: 250px
+		position: relative
+
+		&.dark
+			background: #20202C
+
+		.hero
+			width: 100%
+			text-align: center
+			color: white
+			position: absolute
+			bottom: 20px
+			left: 0
+			right: 0
+
+			&.higher
+				bottom: 50px
+				left: -15px
+
+			p, button
+				display: inline-block
+				margin: 0 10px
+
+			p
+				font-size: 36px
+				font-family: $typewriter
+
+				&.bigger
+					font-size: 36px
+					font-weight: 300
+
+	#section-2
+		width: 100%
+
+		.offer-wrapper
+			width: 100%
+			height: 150px
+			background: $faq-text
+			text-align: center
+			color: white
+			padding: 10px 0
+			position: relative
+			overflow: hidden
+
+			.offer-line
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 3px
+
+			.price-tag
+				height: 40px
+				width: 40px
+
+			h1
+				font-weight: bold
+				font-size: 48px
+
+			h5
+				font-weight: medium
+				font-size: 14px
+				color: #FFD9A5
+
+
+			.shopping-cart-link
+				position: absolute
+				top: 50%
+				right: 75px
+				display: inline-block
+				text-decoration: none
+				color: inherit
+
+				icon
+					font-size: 32px
+
+				.cart-items
+					position: absolute
+					top: -8px
+					right: -5px
+
+
+		.products-wrapper
+			width: 100%
+			overflow: hidden
+			background: white
+			padding-bottom: 150px
+
+			&.padding-top
+				padding-top: 75px
+
+			.products
+				width: 25%
+				float: left
+				height: 375px
+				border: 1px solid #E2E9F0
+				border-left: 0
+				border-top: 0
+				text-align: center
+				display: table
+				position: relative
+
+				&:hover
+					box-shadow: 0px 5px 40px 0px rgba(0,0,0,0.20)
+
+				.products-link
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					width: 100%
+					height: 100%
+
+				.product
+					display: table-cell
+					vertical-align: middle
+					height: 100%
+					width: 100%
+
+					img
+						height: auto
+						width: 175px
+
+					span
+						font-size: 18px
+						display: block
+						color: $modal-text
+
+					.product-title
+						text-decoration: none
+						display: inline-block
+						color: inherit
+						margin-bottom: 10px
+						color: $modal-text
+						font-size: 18px
+
+					p
+						font-weight: 400
+						font-size: 24px
+						color: $price
+
+			.product-show-l, .product-show-r
+				float: left
+				width: 50%
+				height: 100%
+
+			.product-show-l
+				text-align: right
+				padding-right: 75px
+
+				.product-image
+					height: auto
+					width: 300px
+
+			.product-show-r
+				padding: 10px 40px 0 40px
+
+				h1
+					font-size: 24px
+					color: $modal-text
+
+				h3
+					font-size: 24px
+					color: $price
+					font-weight: 400
+					margin: 10px 0 20px
+
+				p
+					font-size: 16px
+					width: 75%
+					color: $modal-text
+
+				.input-container
+					width: 100%
+					margin: 40px 0
+
+					.input-wrapper
+						display: inline-block
+						padding-right: 10px
+						border: none
+						box-shadow: none
+						padding: 0 5px 0 0
+
+						select
+							display: inline-block
+							height: 45px
+							width: 100px
+							background: #F2F5F8
+							background-image: image-url("ios-arrow-down.png")
+							background-repeat: no-repeat
+							background-position: 90%
+							-webkit-appearance: none
+							-moz-appearance: none
+							font-size: 14px
+							padding: 0 10px
+							border: 1px solid #ccc
+
+						.button
+							background: $orange
+							border-radius: 2px
+							color: white
+							padding: 15px 30px
+							border: none
+							cursor: pointer
+							font-size: 14px
+
+	#cart-section
+		width: 100%
+		height: 700px
+		position: relative
+
+		.offer-line
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 3px
+
+		.cart-wrapper
+			border: 1px solid #E2E9F0
+			border-radius: 4px
+			max-width: 900px
+			margin: 0 auto
+			height: auto
+			width: 100%
+			position: relative
+			top: 45%
+			transform: translateY(-50%)
+
+			.cart-row
+				display: block
+				width: 100%
+				height: 100px
+				background: white
+				overflow: hidden
+				position: relative
+
+				&:after
+					content: ""
+					height: 1px
+					width: 95%
+					margin: 0 auto
+					background: #E2E9F0
+					position: absolute
+					bottom: 0
+					left: 0
+					right: 0
+
+				&:last-child
+					&:after
+						content: ""
+						height: 0
+						width: 0
+
+				&.no-bord-btm
+					border-bottom: 0
+
+				.cart-row-item
+					float: left
+					width: 11.6666667%
+					height: 100%
+					text-align: center
+					position: relative
+
+					&.big
+						width: 60%
+						text-align: left
+
+					&.small
+						width: 5%
+
+					select
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						background-image: url("ios-arrow-down.png")
+						background-repeat: no-repeat
+						background-position: 90%
+						height: 40px
+						width: 80px
+						left: 0
+						right: 0
+						margin: 0 auto
+						-webkit-appearance: none
+						-moz-appearance:    none
+						appearance:         none
+						border: 1px solid #ccc
+						text-align: center
+						padding: 10px
+						background: $base-font
+
+
+					.cart-row-item-img
+						height: 100px
+						width: auto
+						padding: 15px
+						float: left
+
+					p
+						position: relative
+						top: 50%
+						transform: translateY(-50%)
+						font-size: 18px
+
+						&.red
+							color: #FF5E41
+							font-size: 16px
+							font-weight: 600
+
+					.icon
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						color: #ccc
+						cursor: pointer
+						right: 25px
+
+				.cart-row-subtotal
+					height: 100%
+					width: 60%
+					float: left
+
+					p
+						position: relative
+						top: 50%
+						transform: translateY(-50%)
+						padding-left: 15px
+						font-size: 24px
+						font-weight: 500
+
+				.cart-row-checkout
+					height: 100%
+					width: 40%
+					float: left
+					text-align: right
+					padding-right: 20px
+
+					a
+						position: relative
+						top: 40%
+						transform: translateY(-50%)
+						margin-right: 10px
+						cursor: pointer
+
+						&.continue-shop
+							background: #F2F5F8
+							color: #4A4A4A
+							font-size: 14px
+							text-decoration: none
+							padding: 15px 20px
+							border-radius: 2px
+
+						&.cart-checkout
+							background: $orange
+							color: white
+							font-size: 14px
+							padding: 15px 20px
+							text-decoration: none
+							border-radius: 2px
+
+
+	#checkout-section
+		width: 100%
+		position: relative
+
+		.offer-line
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 3px
+
+		form
+			.checkout-wrapper
+				width: 100%
+				max-width: 1000px
+				margin: 0 auto
+				height: 100%
+				overflow: hidden
+				padding-bottom: 150px
+
+				.checkout-form, .checkout-summary
+					float: left
+					width: 50%
+					height: 100%
+					margin-top: 50px
+
+				.checkout-form
+					padding: 20px
+
+					.checkout-form-inner
+						border: 1px solid #E2E9F0
+						width: 100%
+						height: 100%
+						border-radius: 4px
+
+						.form-group
+							padding: 20px 20px 0
+
+							.form-group-header
+								overflow: hidden
+
+								p
+									&.account-exists
+										font-size: 12px
+										padding-left: 5px
+
+									span
+										a
+											font-size: 12px
+											color: #B5C1CD
+											text-decoration: none
+											cursor: pointer
+
+								.input-container
+									float: right
+
+									label
+										font-size: 12px
+										color: #4A4A4A
+										margin-left: 5px
+
+								h3,
+								icon
+									display: inline-block
+
+								h3
+									font-family: "Helvetica Neue"
+									color: #4A4A4A
+									font-size: 18px
+									margin-left: 10px
+									font-weight: 500
+
+								icon
+									color: #B5C1CD
+									font-size: 20px
+									vertical-align: middle
+
+							.form-group-inputs
+								margin: 20px 0
+								padding-bottom: 30px
+								border-bottom: 1px solid #E2E9F0
+								overflow: hidden
+
+								&.no-border-bottom
+									border-bottom: none
+
+								label
+									color: #4A4A4A
+									font-size: 14px
+									font-family: "Helvetica Neue"
+
+								.input-container
+									margin: 10px 0
+
+									&.half
+										width: 50%
+										float: left
+
+									&.margin-right
+										padding-right: 10px
+
+									&.margin-left
+										padding-left: 10px
+
+									label
+										margin-bottom: 5px
+										display: block
+
+									input
+										width: 100%
+										padding: 10px
+										border: 1px solid #ccc
+										border-radius: 3px
+										font-size: 13px
+										color: #808080
+
+									select
+										display: inline-block
+										height: 35px
+										width: 100%
+										background: white
+										background-image: image-url("ios-arrow-down.png")
+										background-repeat: no-repeat
+										background-position: 97%
+										-webkit-appearance: none
+										-moz-appearance: none
+										font-size: 14px
+										padding: 0 10px
+										border: 1px solid #ccc
+
+									.cc-number,
+									.cvv,
+									.exp-date
+										border: 1px solid #ccc
+										padding: 10px
+										height: 40px
+										border-radius: 3px
+
+
+			.checkout-summary
+				padding: 20px 40px
+
+				.cart-items
+					border: 1px solid #E2E9F0
+					border-radius: 4px
+					height: 100%
+					position: relative
+
+					.cart-items-header
+						overflow: hidden
+						padding: 20px
+						position: relative
+
+						h3
+							font-family: "Helvetica Neue"
+							color: #4A4A4A
+							font-size: 18px
+							display: inline-block
+
+						.edit-card
+							font-size: 12px
+							color: #B5C1CD
+							text-decoration: none
+							cursor: pointer
+							position: absolute
+							right: 20px
+							bottom: 20px
+
+					.cart-items-body
+						width: 100%
+
+						&.dark
+							background: #20202C
+
+						&.padding
+							padding: 15px 20px 15px
+
+						.item
+							overflow: hidden
+							margin: 10px 5px
+
+							p
+								float: left
+								font-size: 15px
+								letter-spacing: 0
+
+								&.price
+									float: right
+									color: #FF5E41
+
+								&.white
+									color: white
+
+								&.right
+									float: right
+
+								&.bold
+									font-weight: 500
+
+								&.bigger
+									font-size: 18px
+
+						.submit-order
+							background: $orange
+							color: white
+							margin: 20px auto
+							display: block
+							width: 360px
+							height: 45px
+							text-decoration: none
+							text-align: center
+							font-size: 14px
+							border: none
+							-webkit-appearance: none
+							cursor: pointer
+							border-radius: 2px
+
+							&:hover
+								opacity: 0.9
+
+.input-container,
+.input-wrapper
+	&.error
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="number"],
+		select,
+		textarea
+			border: 1px solid red !important

@@ -1,0 +1,1085 @@
+$orange: #5076a7
+$orange-hover: #3f618c
+
+$red: #d2b615
+$red-hover: #b89f12
+
+$gray: #333333
+$light-gray: #f5f5f5
+
+$admin-gray: #272930
+$admin-gray-darker: #2f323a
+$admin-gray-light: #33353e
+
+
+.flash-container
+  position: fixed
+  padding: 30px 20px
+  width: 100%
+  background-color: $orange
+  z-index: 100000000
+  display: none
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  .flash-message
+    color: #FFF
+    text-align: center
+    font-size: 20px
+.form-wrapper
+  padding: 20px 25px
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  overflow: hidden
+
+  &.no-padding
+    padding: 0
+    overflow: visible
+
+  &.padding-adjust
+    padding: 0 25px
+
+    .form-text
+      font-size: 14px
+
+  .input-container
+    margin: 0 0 20px 0
+
+    &.w-percent
+
+      input[type=text]
+        background: image-url("admin/percent-bg.png") no-repeat center right 10px #FFF
+        background-size: 18px
+
+    &.no-margin
+      margin: 0
+
+    &:last-child
+      margin: 0
+
+    &.small
+      margin: 0 0 10px
+
+      input[type=text]
+        padding: 4px 10px 2px
+
+      textarea
+        padding: 4px 10px 2px
+        height: 50px
+
+
+    &.full
+      width: 100%
+
+      input[type=text], input[type=email], input[type=password], input[type=tel], input[type=date], input[type=first_name]
+        width: 100%
+
+      .select-container
+        width: 100%
+
+        select
+          background-position: 98% center
+
+      &.align-right
+        text-align: right
+
+    &.half
+      width: 50%
+      float: left
+
+      .upload-container-input
+        width: 98%
+
+      &.align-right
+        text-align: right
+
+        label
+          margin: 0 0 10px 2% !important
+
+          &.adjust
+            margin: 0 0 5px 0 !important
+
+          &.adjust-w-label
+            margin: 0 0 5px 2% !important
+
+        .select-container
+          float: right
+
+    &.one-tenth
+      width: 10%
+      float: left
+
+    &.one-fifth
+      width: 20%
+      float: left
+
+    &.two-fifths
+      width: 40%
+      float: left
+
+    &.misc
+      width: 45%
+      float: left
+
+      .select-container
+        width: 95%
+
+    &.quarter
+      width: 25%
+      float: left
+
+      &.align-center, &.align-right
+        label
+          margin: 0 0 5px 2% !important
+
+      &.align-right
+        label
+          margin: 0 0 5px 5% !important
+
+      .select-container
+        width: 95%
+        display: inline-block
+
+    &.third
+      width: 33.333333%
+      float: left
+
+      .select-container
+        width: 97%
+        display: inline-block
+
+    &.sixth
+      width: 15%
+      float: left
+
+    &.hidden
+      display: none
+
+    &.check
+      padding: 0 0 0 20px
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+
+    .inline
+      display: inline-block
+      vertical-align: middle
+      margin: 15px 0 5px
+
+      input
+        display: inline-block
+        vertical-align: middle
+        margin: 0 3px 0 0
+
+      label
+        display: inline-block
+        vertical-align: middle
+        margin: 0 20px 0 0
+
+      #transportation_other_car_type
+        margin: 10px 0 0
+
+
+    label
+      display: block
+      font-family: "os-light"
+      font-size: 14px
+      text-align: left
+      color: #000
+      margin: 0 0 5px 0
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+      &.main-title
+        font-family: "os-regular"
+        font-size: 18px
+
+      &.label-link
+        color: #000
+        text-decoration: underline
+        cursor: pointer
+
+      &.foot-note
+        text-align: right
+        opacity: 0.6
+        font-style: italic
+        margin: 5px 0 0
+
+      span
+        color: rgba(0,0,0,.5)
+
+        &.link
+          color: #000
+          text-decoration: underline
+          cursor: pointer
+
+          &:hover
+            text-decoration: none
+
+        &.room-count
+          color: #000
+
+
+    //*****INPUTS**********
+
+    // input[type=checkbox]
+    //   visibility: hidden
+
+    select[multiple]
+      display: inline-block
+      width: 98%
+      resize: vertical
+
+    input[type=text], input[type=email], input[type=password], input[type=tel], input[type=date]
+      display: inline-block
+      width: 98%
+      border: 1px solid rgba(0,0,0,.2)
+      padding: 10px 10px 11px
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      outline: none
+      line-height: 16px
+      font-family: "os-light"
+      font-size: 14px
+      text-align: left
+      color: #000
+      margin: 0 0 5px 0
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+    ::-webkit-input-placeholder
+      font-family: "os-light-italic"
+
+
+    :-moz-placeholder
+      font-family: "os-light-italic"
+
+
+    ::-moz-placeholder
+      font-family: "os-light-italic"
+
+
+    :-ms-input-placeholder
+      font-family: "os-light-italic"
+
+    //*****TEXTAREA**********
+
+    textarea
+      width: 100%
+      height: 100px
+      border: 1px solid rgba(0,0,0,.2)
+      padding: 12px 10px
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      outline: none
+      resize: none
+      line-height: 16px
+      font-family: "os-light"
+      font-size: 14px
+      text-align: left
+      color: #000
+      margin: 0 0 5px 0
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+    .multi-select
+      width: 100%
+      border: 1px solid rgba(0,0,0,.2)
+      padding: 12px 10px
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      outline: none
+      resize: none
+      line-height: 16px
+      font-family: "os-light"
+      font-size: 14px
+      text-align: left
+      color: #000
+      margin: 0 0 20px 0
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+
+    //*****SELECT**********
+
+    .select-container
+      width: 98%
+      border: 1px solid rgba(0,0,0,.2)
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+
+      &.third
+        width: 32%
+        float: left
+
+        &:nth-of-type(2)
+          margin: 0 1%
+
+      &.small-select
+        width: 80%
+
+        select
+          width: 100%
+          padding: 5px 0 5px 5px
+          background-position: 85% center
+          line-height: initial
+          font-size: 12px
+
+
+      select
+        background: image-url("admin/dropdown-arrow.png") no-repeat #FFF
+        background-position: 95% center
+        height: 100%
+        width: 100%
+        outline: none
+        border: 0
+        line-height: 16px
+        padding: 12px 10px
+        cursor: pointer
+        -webkit-appearance: none
+        -moz-appearance: window
+        font-family: "os-light"
+        font-size: 14px
+        color: #8f8f8f
+        font-weight: normal
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+
+      select[multiple]
+        background: red
+
+
+    //*****CHECKBOX**********
+
+    p.checkbox-text
+      display: inline-block
+      font-family: "os-light"
+      font-size: 14px
+      color: #000
+      margin: 0 20px 0 5px
+      vertical-align: middle
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+    .checkbox-container
+      width: 15px
+      height: 17px
+      position: relative
+
+      &.inline
+        display: inline-block
+        vertical-align: middle
+
+        &:last-child
+          background: red
+
+      &.large
+        width: 25px
+        height: 27px
+
+        label
+          width: 25px
+          height: 25px
+          background: #FFF
+
+          &:after
+            width: 10px
+            height: 6px
+            border: 3px solid $red
+            border-top: none
+            border-right: none
+            top: 6px
+            left: 6px
+
+      label
+        cursor: pointer
+        position: absolute
+        width: 15px
+        height: 15px
+        top: 0
+        border-radius: 2px
+        background: #f2f2f2
+        border: 1px solid rgba(0,0,0,.2)
+
+        &:after
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+          filter: alpha(opacity=0)
+          opacity: 0
+          content: ''
+          position: absolute
+          width: 8px
+          height: 4px
+          background: transparent
+          top: 3px
+          left: 3px
+          border: 2px solid $red
+          border-top: none
+          border-right: none
+          -webkit-transform: rotate(-45deg)
+          -moz-transform: rotate(-45deg)
+          -o-transform: rotate(-45deg)
+          -ms-transform: rotate(-45deg)
+          transform: rotate(-45deg)
+
+
+        &:hover::after
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"
+          filter: alpha(opacity=30)
+          opacity: 0.3
+
+
+      input[type=checkbox]:checked + label:after
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+        filter: alpha(opacity=100)
+        opacity: 1
+
+    //*****RADIO**********
+
+    .radio-container
+      display: inline-block
+
+    //*****SLIDER W TEXT**********
+
+    .slider-text-container
+      width: 65px
+      height: 26px
+      background: #e4e4e4
+      margin: 20px 0
+      -webkit-border-radius: 50px
+      -moz-border-radius: 50px
+      border-radius: 50px
+      position: relative
+
+      &.inner-shadow
+        -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2)
+        -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2)
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2)
+
+      input[type=checkbox]
+        visibility: hidden
+
+      &:after
+        content: 'No'
+        font: 12px/26px "os-light"
+        color: #000
+        position: absolute
+        right: 10px
+        z-index: 0
+
+      &:before
+        content: 'Yes'
+        font: 12px/26px "os-regular"
+        color: #FFF
+        position: absolute
+        left: 10px
+        z-index: 0
+
+      label
+        display: block
+        width: 30px
+        height: 30px
+        -webkit-border-radius: 50px
+        -moz-border-radius: 50px
+        border-radius: 50px
+        -webkit-transition: all .2s ease
+        -moz-transition: all .2s ease
+        -o-transition: all .2s ease
+        -ms-transition: all .2s ease
+        transition: all .2s ease
+        cursor: pointer
+        position: absolute
+        top: -3px
+        left: -1px
+        background: #fff
+        border: 1px solid rgba(0,0,0,.2)
+        z-index: 1
+
+      input[type=checkbox]:checked + label
+        left: 35px
+
+    //*****SLIDER**********
+    .slider-container
+      width: 40px
+      height: 20px
+      background: #e5e5e5
+      margin: 20px 0
+      -webkit-border-radius: 50px
+      -moz-border-radius: 50px
+      border-radius: 50px
+      position: relative
+
+
+      label
+        display: block
+        width: 25px
+        height: 25px
+        -webkit-border-radius: 50px
+        -moz-border-radius: 50px
+        border-radius: 50px
+        -webkit-transition: all .4s ease
+        -moz-transition: all .4s ease
+        -o-transition: all .4s ease
+        -ms-transition: all .4s ease
+        transition: all .4s ease
+        cursor: pointer
+        position: absolute
+        top: -3px
+        left: -3px
+        background: #fff
+        border: 1px solid rgba(0,0,0,.2)
+
+
+      input[type=checkbox]:checked + label
+        left: 15px
+
+    //*****CUSTOM UPLOAD INPUT**********
+    .upload-container-input
+      display: table
+      width: 100%
+      position: relative
+      border-radius: 4px
+
+
+      &.error
+        border: 1px solid #F00
+
+      .upload-btn-field
+        background: #FFF
+        display: table-cell
+        width: 80%
+        border: 1px solid rgba(0,0,0,.2)
+        border-right: 0
+        padding: 10px 10px 6px
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+
+      .upload-btn
+        background-color: $red
+        display: table-cell
+        width: 20%
+        font-size: 16px
+        color: #FFF
+        vertical-align: top
+        border: 1px solid rgba(0,0,0,.1)
+        border-left: 0
+        position: relative
+        padding: 10px 15px
+        text-align: center
+        font-family: "os-regular"
+        font-weight: normal
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        cursor: pointer
+        position: relative
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+
+      input
+        width: 100% !important
+        height: 100% !important
+        margin: 0
+        padding: 0
+        position: absolute
+        left: 0
+        top: 0
+        cursor: pointer
+        opacity: 0
+        filter: alpha(opacity=0)
+
+      p.btn-path
+        font-family: "os-light-italic"
+        font-size: 13px
+        color: #000
+        cursor: pointer
+        font-weight: normal
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+
+        &.error
+          color: #a32b30
+
+
+    //*****CUSTOM UPLOAD**********
+    .upload-container
+
+      .upload-btn
+        font-family: "gs-regular"
+        font-size: 16px
+        color: #FFF
+        border-radius: 3px
+        display: inline-block
+        vertical-align: top
+        background-color: $orange
+        position: relative
+        padding: 10px 15px
+        font-weight: normal
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        cursor: pointer
+        position: relative
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+
+        &:hover
+          background-color: $orange-hover
+
+        input
+          width: 100% !important
+          height: 100% !important
+          margin: 0
+          padding: 0
+          position: absolute
+          left: 0
+          top: 0
+          cursor: pointer
+          opacity: 0
+          filter: alpha(opacity=0)
+
+      .upload-btn-label
+        max-width: 60%
+        margin: 0 0 0 5px
+        padding: 10px 20px 0 10px
+        border-radius: 3px
+        display: none
+        vertical-align: top
+
+        p.btn-path
+          font-family: "gs-light"
+          font-size: 16px
+          color: #000
+          font-weight: normal
+          -webkit-font-smoothing: antialiased
+          -moz-osx-font-smoothing: grayscale
+
+          &.error
+            color: #a32b30
+
+
+    //*****SUBMIT**********
+
+    input[type=submit]
+      background: $red
+      width: auto
+      display: inline-block
+      border: none
+      border-top: 1px solid rgba(255,255,255,.2)
+      border-bottom: 1px solid rgba(0,0,0,.2)
+      border-radius: 3px
+      padding: 12px 14px
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      line-height: 16px
+      font-family: "montserrat-regular"
+      font-size: 14px
+      outline: none
+      color: #FFF
+      cursor: pointer
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+      &:hover
+        background: $red-hover
+
+      &.small
+        font-size: 12px
+        line-height: 12px
+        padding: 12px 10px
+
+
+.search-by-type
+
+  label
+    display: block
+    font-family: "os-light"
+    font-size: 14px
+    text-align: left
+    color: #000
+    margin: 0 0 10px 5px
+    font-weight: normal
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+  .search-input
+    display: inline-block
+    vertical-align: top
+    width: 30%
+    margin: 0 5px 20px
+
+    &.full
+      width: 100%
+
+      input[type=submit]
+        background: $red
+        width: auto
+        display: inline-block
+        border: none
+        border-top: 1px solid rgba(255,255,255,.2)
+        border-bottom: 1px solid rgba(0,0,0,.2)
+        border-radius: 3px
+        padding: 8px 14px
+        margin: 0 0 10px
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+        line-height: 16px
+        font-family: "montserrat-regular"
+        font-size: 14px
+        outline: none
+        color: #FFF
+        cursor: pointer
+        font-weight: normal
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+
+        &:hover
+          background: $red-hover
+
+    input[type=text], input[type=email]
+      display: inline-block
+      width: 100%
+      border: 1px solid rgba(0,0,0,.2)
+      padding: 5px
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      outline: none
+      line-height: 16px
+      font-family: "os-light"
+      font-size: 14px
+      text-align: left
+      color: #000
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+    ::-webkit-input-placeholder
+      color: rgba(0,0,0,.7)
+
+
+    :-moz-placeholder
+      color: rgba(0,0,0,.7)
+
+
+    ::-moz-placeholder
+      color: rgba(0,0,0,.7)
+
+
+    :-ms-input-placeholder
+      color: rgba(0,0,0,.7)
+
+    .search-select
+      width: 100%
+      border: 1px solid rgba(0,0,0,.2)
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+
+      select
+        background: image-url("admin/dropdown-arrow.png") no-repeat #FFF
+        background-position: 95% center
+        height: 100%
+        width: 100%
+        outline: none
+        border: 0
+        line-height: 16px
+        padding: 5px
+        cursor: pointer
+        -webkit-appearance: none
+        -moz-appearance: window
+        font-family: "os-light"
+        font-size: 14px
+        color: #8f8f8f
+        font-weight: normal
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+
+.modal-for-images
+  display: none
+  position: absolute
+  background: #FFF
+  width: 80%
+  top: 100px
+  left: 50%
+  margin: 0 0 0 -40%
+  z-index: 10
+  box-shadow: 0px 0px 5px rgba(0,0,0,.4)
+
+.img-fix
+  width: 100%
+  border: 1px dashed rgba(0,0,0,.2)
+  padding: 30px
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+
+
+.upload-images
+
+  .img-wrapper
+    width: 150px
+    display: inline-block
+    vertical-align: top
+    margin: 20px 5px
+
+    .img
+      width: 100%
+      height: 100px
+      overflow: hidden
+      margin: 0 0 10px
+
+      img
+        width: 100%
+        margin: 0 0 10px
+
+
+.day-button
+  border: 1px solid rgba(0,0,0,.1)
+  display: inline-block
+  vertical-align: top
+  font-family: "os-regular"
+  font-size: 14px
+  color: #000
+  margin: 0 5px 20px 0
+  font-weight: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  cursor: pointer
+  padding: 5px 14px
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+  &:hover
+    background: rgba(0,0,0,.1)
+
+  &.active
+    background: $red
+    color: #FFF
+    border: 1px solid $red
+
+p.form-text
+  display: inline-block
+  vertical-align: top
+  font-family: "os-regular"
+  font-size: 18px
+  color: #000
+  margin: 0 20px 0 0
+  font-weight: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  cursor: pointer
+
+.open-modal-btn, .edit-day-button
+  display: inline-block
+  vertical-align: top
+  font-family: "os-regular"
+  font-size: 18px
+  color: $red
+  font-weight: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  cursor: pointer
+
+.accomodations, .activities, .transportation, .checkin-dates, .blackout-dates, .cancellation, .days-wrapper, .trip-cost, .deposit, .testimonial
+  display: none
+  position: absolute
+  background: #FFF
+  width: 80%
+  top: 100px
+  left: 50%
+  margin: 0 0 0 -40%
+  z-index: 10
+  box-shadow: 0px 0px 5px rgba(0,0,0,.4)
+
+.close-modal-btn
+  position: absolute
+  right: 20px
+  top: 10px
+  font-family: "os-semibold"
+  font-size: 25px
+  color: #000
+  font-weight: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  cursor: pointer
+
+.display-images, .upload-images, .accomodation-partial, .activity-partial, .transportation-partial, .display-feature-images, .checkin-partial, .blackout-partial, .cancellation-partial, .deposit-partial
+  padding: 0 25px
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+  .edit-accomodations, .edit-activity, .edit-transportation, .edit-checkin-date, .edit-blackout, .edit-cancellation, .edit-deposit
+    display: inline-block
+    font-family: "os-semibold"
+    font-size: 14px
+    color: #000
+    font-weight: normal
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    cursor: pointer
+
+  .delete-accomodation, .delete-activity, .delete-transportation
+    background-color: rgba(0,0,0,.2)
+    display: inline-block
+    font-family: "os-semibold"
+    font-size: 14px
+    color: #000
+    font-weight: normal
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    cursor: pointer
+    border-radius: 50%
+    padding: 1px 8px 3px
+    margin: 0 5px 0 0
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+  .img-wrapper
+    display: inline-block
+    position: relative
+    width: 150px
+    overflow: hidden
+
+    .delete-destination-image, .delete-image, .image-delete, .image-delete-product, .delete-featured-experience-image
+      position: absolute
+      top: 0
+      right: 0
+      background-color: rgba(0,0,0,.8)
+      font-family: "os-semibold"
+      font-size: 14px
+      color: #FFF
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      border-radius: 4px 0 0 4px
+      cursor: pointer
+      padding: 5px 8px
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+
+  .img
+    width: 100%
+    height: 100px
+    overflow: hidden
+
+
+  img
+    width: 100%
+
+.wrap-all
+  display: inline-block
+  vertical-align: middle
+  margin: 0 5px 0 0
+
+.delete-btn
+  background-color: rgba(0, 0, 0, 0.2)
+  display: inline-block
+  font-family: "os-semibold"
+  font-size: 14px
+  color: #000
+  font-weight: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  cursor: pointer
+  border-radius: 50%
+  padding: 1px 8px 3px
+  margin: 0 5px 0 0
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+.delete-modal-wrapper
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0,0,0,0.6)
+  z-index: 100
+
+  .delete-modal-container
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    max-width: 500px
+    background: #FFF
+    padding: 30px 20px
+    text-align: center
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    border-radius: 4px
+    -moz-transform: translateX(-50%) translateY(-50%)
+    -webkit-transform: translateX(-50%) translateY(-50%)
+    transform: translateX(-50%) translateY(-50%)
+
+    p
+      font-family: "os-regular"
+      font-size: 15px
+      color: #000
+      margin: 0 0 20px
+      text-align: center
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+    .delete-modal-btn
+      display: inline-block
+      vertical-align: middle
+      background: $red
+      padding: 8px 30px
+      font-family: "os-semibold"
+      font-size: 15px
+      color: #FFF
+      text-align: center
+      font-weight: normal
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+      border-radius: 4px
+      cursor: pointer
+
+      &:hover
+        opacity: 0.9
+
+
+.cursorless
+  cursor: auto !important
+
+.search-by-type
+
+  label
+    margin: 0 0 10px 0
+
+  form
+
+    .search-input
+      margin: 0 10px 20px 0
+
+      .search-select
+
+        select
+          padding: 8px 5px 5px

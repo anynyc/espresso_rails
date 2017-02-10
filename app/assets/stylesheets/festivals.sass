@@ -1,0 +1,175 @@
+#festivals
+	#section-1
+		background-image: url(festival-home-bg.png)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		height: 700px
+		width: 100%
+		text-align: center
+		position: relative
+
+		.hero
+			padding-top: 15%
+			width: 100%
+
+			h1
+				font-family: $typewriter
+				font-size: 90px
+				color: white
+				font-weight: 500
+
+			ul
+				margin-top: 1rem
+
+				li
+					border-right: 2px solid $link
+					color: $link
+					font-weight: 600
+					display: inline-block
+					padding: 0 10px
+
+					&:last-child
+						border-right: none
+
+			button
+				display: inline-block
+				background: rgba(0,0,0,0.1)
+				color: white
+				padding: 15px 40px
+				outline: none
+				border: 1px solid rgba(0,0,0,0.1)
+				border-radius: 50px
+				font-size: 15px
+				vertical-align: top
+				margin: 2rem 5px 0
+
+				&:hover
+					// background: $orange
+					color: white
+					cursor: pointer
+
+				&.orange
+					background: $orange
+
+				a
+					color: inherit
+					text-decoration: none
+
+		.stages
+			width: 100%
+			height: 155px
+			background: black
+			position: absolute
+			bottom: -145px
+			left: 0
+			right: 0
+
+			ul
+				width: 100%
+				text-align: center
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				height: 55px
+
+				li
+					color: white
+					display: inline-block
+					padding: 0 15px 35px
+					font-size: 14px
+					font-weight: 600
+
+					&:hover, &.active
+						color: $orange
+						border-bottom: 3px solid $orange
+						cursor: pointer
+
+
+	#section-2
+		width: 100%
+		margin-top: -5px
+		padding-top: 10%
+
+		.schedule
+			max-width: 28rem
+			margin: 0 auto
+			text-align: center
+			padding-top: 5rem
+
+			.sponsor
+				width: 100%
+				border: 1px solid rgba(255,255,255,0.12)
+				border-radius: 2px
+				padding: 20px
+
+				p
+					font-size: 14px
+					color: white
+					padding: 0 10px
+
+				p, img
+					display: inline-block
+					vertical-align: -webkit-baseline-middle
+
+			.acts
+				margin-top: 3rem
+
+				h5
+					font-size: 17px
+					color: $orange
+					margin-bottom: 3px
+
+				h3
+					color: white
+					margin-bottom: 20px
+
+		.twitter-box
+			background: white
+			width: 80%
+			margin: 5rem auto
+			height: 4.5rem
+			box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.12)
+			border-radius: 2px
+			text-align: center
+
+			span, p
+				display: inline-block
+				padding-top: 20px
+
+			span
+				color: #55ACEE
+				font-size: 25px
+
+			p
+				vertical-align: top
+				padding-top: 23px
+				padding-left: 2rem
+				color: $grey
+				font-size: 14px
+				font-style: italic
+
+				a
+					font-weight: 600
+					text-decoration: none
+					color: inherit
+
+		.bottom-pic
+			width: 100%
+			height: 425px
+			background-image: url("bottom-img-2.png")
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: 0 -35px
+			position: relative
+
+			// .overlay
+			// 	height: 100%
+			// 	width: 100%
+			// 	position: absolute
+			// 	top: 0
+			// 	bottom: 0
+			// 	left: 0
+			// 	right: 0
+			// 	background: rgba(255, 255, 255, 0.35)

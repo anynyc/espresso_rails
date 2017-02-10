@@ -1,0 +1,143 @@
+#shows
+	#section-1
+		position: relative
+		width: 100%
+		height: 780px
+		background: url("shows-bg.png")
+		background-repeat: no-repeat
+		background-size: cover
+
+		.hero
+			width: 100%
+			height: 100%
+			padding-top: 10rem
+			overflow: hidden
+
+			.col-10
+				float: left
+				width: 15%
+				height: 100%
+
+			.hero-l, .hero-r
+				float: left
+				width: 35%
+				height: 100%
+				padding-top: 12%
+
+				&.align-right
+					text-align: right
+
+				&.p-top
+					padding-top: 18%
+
+				h3
+					font-family: $typewriter
+					font-size: 48px
+					font-weight: 300
+					color: #F5A623
+
+				h1
+					font-family: $typewriter
+					font-size: 100px
+					font-weight: normal
+					color: white
+
+				p
+					font-weight: bold
+					font-size: 13px
+					display: inline-block
+					color: white
+
+				span
+					color: white
+
+				button
+					background: #F5A623
+					padding: 12px 40px
+					outline: none
+					border: 1px solid rgba(0, 0, 0, 0.08)
+					border-radius: 20px
+					color: white
+					font-size: 14px
+					box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.5)
+					margin: 0 10px
+
+					&.black
+						background: $button-black
+
+			.headliner
+				position: absolute
+				bottom: 70px
+				text-align: center
+				width: 100%
+
+				p
+					font-style: italic
+					font-size: 13px
+					color: white
+					margin-bottom: 10px
+
+	#section-2
+		height: 500px
+		width: 100%
+		overflow: hidden
+
+		.show
+			float: left
+			width: 50%
+			height: 100%
+
+			&.atl
+				background-image: url("shows-atlanta.png")
+				background-size: cover
+				background-repeat: no-repeat
+
+			&.char
+				background-image: url("shows-char.png")
+				background-size: cover
+				background-repeat: no-repeat
+
+			.text-wrapper
+				text-align: center
+				width: 100%
+				padding-top: 15%
+
+				h1
+					font-family: $typewriter
+					font-size: 64px
+					font-weight: normal
+					text-align: center
+					color: white
+
+				h3
+					font-family: $typewriter
+					font-size: 24px
+					font-weight: normal
+					text-align: center
+					color: $orange
+					margin-bottom: 10px
+
+				p
+					font-size: 13px
+					display: inline-block
+					color: white
+
+				span
+					color: white
+
+				.buttons-wrapper
+					margin-top: 3rem
+
+					button
+						background: transparent
+						padding: 12px 40px
+						outline: none
+						border: 1px solid white
+						border-radius: 20px
+						color: white
+						font-size: 14px
+						box-shadow: $button-shadow
+						margin: 0 5px
+
+						&:hover
+							cursor: pointer

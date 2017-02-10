@@ -1,0 +1,625 @@
+#user
+	.user-login
+		width: 100%
+		height: 100vh
+		overflow: hidden
+		position: relative
+
+		a
+			text-decoration: none
+			color: inherit
+
+		.go-back
+			padding: 25px
+
+			.icon, p
+				color: black
+				font-size: 16px
+				display: inline-block
+
+			.icon
+				font-size: 12px
+				padding-right: 5px
+
+		.signup-wrapper
+			width: 50%
+			float: left
+			height: 100%
+			background-image: image-url("user-login-bg.png")
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			position: relative
+
+			.go-back
+				padding: 25px
+
+				.icon, p
+					color: white
+					font-size: 16px
+					display: inline-block
+
+				.icon
+					font-size: 12px
+					padding-right: 5px
+
+			.signup-text
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				margin: 0 auto
+				width: 100%
+				text-align: center
+
+				h5
+					font-family: $typewriter
+					font-size: 16px
+					color: white
+					font-weight: 500
+					line-height: 22px
+
+				.register-user
+					border: 1px solid white
+					background: transparent
+					color: white
+					padding: 8px 37px
+					border-radius: 50px
+					text-decoration: none
+					display: inline-block
+					width: auto
+					margin: 25px auto
+					font-size: 13px
+
+			.socials-wrapper
+				position: absolute
+				bottom: 50px
+				left: 0
+				right: 0
+				text-align: center
+
+				a
+					text-decoration: none
+					display: inline-block
+					color: white
+					padding: 0 10px
+					font-size: 22px
+
+		.login-wrapper
+			width: 50%
+			float: right
+			height: 100%
+			background: white
+			position: relative
+
+			&.signup
+				width: 100%
+				float: none
+				display: table
+				height: 100%
+				margin-top: -25px
+
+			.login-content
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				width: 100%
+				text-align: center
+
+				&.signup-content
+					position: static
+					top: 0
+					transform: none
+					display: table-cell
+					vertical-align: middle
+					height: 100%
+
+				h3
+					font-size: 18px
+					font-family: $typewriter
+					font-weight: 500
+
+				form
+					width: 50%
+					margin: 30px auto
+
+					&.signup-form
+						width: 500px
+
+					.input-container
+						label, input
+							display: block
+							width: 100%
+							text-align: left
+
+						label
+							margin-bottom: 10px
+
+						input
+							padding: 10px
+							border: 1px solid #ccc
+							margin-bottom: 15px
+							font-size: 14px
+
+						input[type="submit"]
+							background: $orange
+							border: 1px solid $orange
+							color: white
+							text-align: center
+
+						.user-login-btn
+							background: $orange
+							border: 1px solid $orange
+							color: white
+							border-radius: 50px
+							text-decoration: none
+							display: inline-block
+							padding: 8px 37px
+							font-size: 13px
+							margin: 25px auto
+							width: auto
+							cursor: pointer
+
+					.forgot-password
+						margin-top: 15px
+						display: block
+
+						.forgot-password-title
+							color: rgba(0,0,0,0.8)
+							font-size: 14px
+
+		//Forgot Password
+		.forgot-password-container
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+			right: 0
+			padding: 10px
+
+			.forgot-password-form
+				max-width: 500px
+				width: 100%
+				background: white
+				margin: 0 auto
+				border: 1px solid #ccc
+				padding: 50px 40px
+
+				.forgot-password-header-wrapper
+					text-align: center
+					margin-bottom: 30px
+
+					.forgot-password-header
+						font-size: 20px
+
+				.forgot-password-body-wrapper
+					.back-btn
+						display: block
+						text-align: center
+
+					.input-container
+
+						&.center
+							text-align: center
+
+						label, input
+							display: block
+
+						label
+							margin-bottom: 5px
+							font-size: 16px
+
+						input
+							width: 100%
+							padding: 10px
+							border: 1px solid #ccc
+
+						.forgot-password-submit
+							background: $orange
+							padding: 10px 20px
+							margin: 25px auto 20px
+							color: white
+							text-decoration: none
+							display: inline-block
+
+		.user-signup-container
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+			right: 0
+
+			form
+				max-width: 500px
+				width: 100%
+				background: white
+				margin: 0 auto
+				border: 1px solid #ccc
+				padding: 50px 40px
+
+				.signup-header
+					margin-bottom: 20px
+
+					h3
+						text-align: center
+						font-size: 18px
+
+				.input-container
+					input
+						width: 100%
+						padding: 10px
+						border: 1px solid #ccc
+						margin-bottom: 10px
+						font-size: 14px
+
+					input[type="submit"]
+						background: $orange
+						color: white
+						border: 1px solid $orange
+
+				.back-btn
+					display: block
+					text-align: center
+
+	//Dashboard header
+	.header-wrapper#user
+		width: 100%
+		height: 275px
+		background: url("user-bg-print.png") no-repeat #20202C
+		position: relative
+		background-size: cover
+
+		.avatar-wrapper
+			width: 100%
+			position: absolute
+			left: 0
+			right: 0
+			text-align: center
+			bottom: 10px
+			padding: 0 35px 0 0
+
+			.profile-img-wrapper
+				width: 95px
+				height: 95px
+				+border-radius(50%)
+				overflow: hidden
+				margin: auto
+				+webkit-mask
+
+
+	.dashboard-nav-container
+		width: 100%
+		background: #191923
+		height: 60px
+		text-align: center
+
+		.dashboard-nav-wrapper
+			display: inline-block
+			line-height: 60px
+			padding: 0 35px
+
+			icon
+				color: #A6A7B6
+				padding-right: 5px
+				transform: translateY(3px)
+				display: inline-block
+
+				&.active
+					color: $orange
+
+			.dashboard-nav-link
+				text-decoration: none
+				color: white
+				display: inline-block
+				color: #A6A7B6
+				font-size: 13px
+				letter-spacing: 1px
+
+				&.active
+					color: $orange
+
+	//User dashboard body
+	.user-body
+		width: 100%
+		// height: 800px
+		background: white
+		position: relative
+		padding-bottom: 20px
+
+		&.auto-height
+			height: auto
+
+		.append-screen
+			height: 100%
+			width: 100%
+
+		.cards
+			.form-container
+				display: block
+				width: 100%
+
+				header
+					text-align: center
+
+				form
+					margin: 0 auto
+
+
+		//Orders
+
+		.purchase-container
+			max-width: 900px
+			width: 100%
+			height: auto
+			margin: 0 auto 50px
+			padding-top: 7%
+
+			.purchase-header
+				width: 100%
+				overflow: hidden
+
+				h3
+					color: #4A4A4A
+					font-size: 14px
+					display: inline-block
+
+				.help-wrapper
+					float: right
+
+					.icon, .help-link
+						display: inline-block
+						color: #B5C1CD
+						font-size: 12px
+
+					.icon
+						transform: translateY(1px)
+
+					.help-link
+						text-decoration: none
+						padding-right: 5px
+						display: inline-block
+
+			table.purchase-table
+				border: 1px solid #ccc
+				width: 100%
+				margin-top: 30px
+				border-collapse: collapse
+				text-align: left
+				height: auto
+
+				thead
+					background: #F2F5F8
+					tr
+						th
+							padding: 10px
+
+
+				tbody
+					tr
+						border-bottom: 1px solid #ccc
+						td
+							padding: 10px
+							position: relative
+							color: #4A4A4A
+							font-size: 14px
+
+							&.wide
+								width: 40%
+
+							.table-product-image
+								height: 50px
+								width: 50px
+
+							.table-product-title
+								display: inline-block
+								top: 50%
+								position: absolute
+								transform: translateY(-50%)
+								padding-left: 10px
+
+			.orders-table-wrapper
+				border: 1px solid #ccc
+				width: 100%
+				margin-top: 30px
+				text-align: left
+				height: auto
+
+				.table-header-wrapper
+					background: #F2F5F8
+					width: 100%
+					padding: 15px
+					overflow: hidden
+
+					.table-header
+						width: 25%
+						display: inline-block
+						float: left
+
+						h5
+							font-size: 14px
+							color: #000000
+
+				.table
+					display: table
+					width: 100%
+					padding: 15px
+
+					.table-cell
+						display: table-cell
+						vertical-align: middle
+						width: 25%
+						position: relative
+
+						.table-product-image
+							height: 75px
+							width: 75px
+							display: inline-block
+
+						.table-product-title
+							display: inline-block
+							top: 50%
+							transform: translateY(-50%)
+							position: absolute
+							font-size: 14px
+							padding-left: 15px
+
+				.item-dropdown-wrapper
+					display: none
+					width: 100%
+					background: #f1f1f1
+
+					.table
+						display: table
+						width: 100%
+						margin: 0 auto
+						padding: 15px
+
+						.table-cell
+							display: table-cell
+							vertical-align: middle
+							width: 25%
+							position: relative
+
+							&.padding
+								padding: 15px
+
+							.table-product-image
+								height: 50px
+								width: 50px
+								display: inline-block
+
+							.table-product-title
+								display: inline-block
+								top: 50%
+								transform: translateY(-50%)
+								position: absolute
+								font-size: 14px
+								padding-left: 15px
+
+
+		//Settings
+		.settings-container
+			max-width: 500px
+			width: 100%
+			height: auto
+			margin: 50px auto 30px
+			// left: 0
+			// right: 0
+			// position: absolute
+			// top: 50%
+			// transform: translateY(-50%)
+
+			form
+				width: 100%
+				height: 100%
+
+				.avatar-wrapper
+					width: 100%
+
+					#image-holder
+						width: 100%
+						height: 100%
+						text-align: center
+
+						.thumb-image
+							display: block
+							width: 100px
+							height: 100px
+							margin: 0 auto
+							border-radius: 50px
+
+					.file-upload-btn
+						position: relative
+						overflow: hidden
+						margin: 10px auto
+						display: block
+						width: 100%
+
+						span
+							display: block
+							text-align: center
+							border: 1px solid #ccc
+							padding: 10px
+							background: #191923
+							color: white
+							margin: 0 auto
+							width: 120px
+
+						input#fileUpload
+							position: absolute
+							top: 0
+							right: 0
+							margin: 0
+							padding: 0
+							font-size: 20px
+							cursor: pointer
+							opacity: 0
+							filter: alpha(opacity=0)
+							width: 100%
+
+					.file-input-container
+						width: 100%
+						text-align: center
+						margin: 10px auto
+
+				.form-body
+					margin: 50px auto
+
+					.input-container
+						label, input
+							display: block
+							width: 100%
+
+						label
+							margin-bottom: 5px
+
+						input
+							padding: 10px
+							border: 1px solid #ccc
+							margin-bottom: 15px
+
+					.submit-btn-wrapper
+						text-align: center
+
+						.submit-btn
+							display: inline-block
+							background: $orange
+							color: white
+							padding: 10px
+							margin: 10px auto
+							text-decoration: none
+							cursor: pointer
+							width: 120px
+							-webkit-appearance: none
+							border: none
+							cursor: pointer
+
+							&:hover
+								opacity: 0.8
+
+.no-results
+	width: 100%
+	padding: 200px 50px 250px
+	text-align: center
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	font-family: $typewriter
+	font-size: 30px
+
+//User Settings - Success Modal
+.success-modal-container
+	position: fixed
+	top: -100%
+	left: 0
+	right: 0
+	width: 100%
+	background: #F5A623
+	z-index: 500000000
+
+	h1
+		font-family: $base-font
+		text-align: center
+		font-weight: 600
+		font-size: 18px
+		color: #FFF
+		padding: 15px 0

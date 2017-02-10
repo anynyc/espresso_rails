@@ -1,0 +1,41 @@
+.row
+	/ left column
+	.col-md-8
+		/ general form elements
+		.box.box-primary
+			.box-header.with-border
+				%h3.box-title New Video
+			/ /.box-header
+			/ form start
+			%h3
+				Signup
+			= simple_form_for admin_videos_path do |f|
+				.input-container.validate
+					%label
+						Video Url
+					= f.input_field :video_url, placeholder: 'Video Url'
+				.input-container.validate
+					%label
+						Gif Url
+					= f.input_field :gif_url, placeholder: 'gif_url'
+				.input-container.validate
+					%label
+						Headline
+					= f.input_field :headline, placeholder: 'Headline'
+				.input-container.validate
+					%label
+						Emoji 1
+					= f.input_field :emoji_one, placeholder: 'Emoji 1'
+				.input-container.validate
+					%label
+						Emoji 2
+					= f.input_field :emoji_two, placeholder: 'Emoji 2'
+				.input-container.validate
+					%label
+						Emoji 3
+					= f.input_field :emoji_three, placeholder: 'Emoji 3'
+				.input-container.validate
+					%label
+					= f.input :date, :as => :date, :input_html => {:class => 'date_picker'}
+				.input-container.submit-btn-wrapper
+					= f.submit "Submit", class: "submit-btn validate-form"

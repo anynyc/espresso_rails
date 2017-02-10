@@ -1,0 +1,64 @@
+= stylesheet_link_tag 'admin/application', media: 'all', 'data-turbolinks-track' => true
+.login-box
+  .login-logo
+    -# %a{:href => "../../index2.html"}
+    %b> RED VOD
+  / /.login-logo
+  .login-box-body
+    %p.login-box-msg Sign in to start your session
+    = form_tag admin_sessions_path do
+      .form-group.has-feedback
+        = text_field_tag :email, nil, placeholder: 'Email', class: 'form-control' do
+          %span.glyphicon.glyphicon-envelope.form-control-feedback
+      .form-group.has-feedback
+        = password_field_tag :password, nil, placeholder: 'Password', class: 'form-control' do
+          %span.glyphicon.glyphicon-lock.form-control-feedback
+
+        / /.col
+        .col-xs-4
+          = submit_tag 'Sign In', class: 'btn btn-primary btn-block btn-flat'
+          -# %button.btn.btn-primary.btn-block.btn-flat{:type => "submit"} Sign In
+        / /.col
+    -# .social-auth-links.text-center
+    -#   %p - OR -
+    -#   %a.btn.btn-block.btn-social.btn-facebook.btn-flat{:href => "#"}
+    -#     %i.fa.fa-facebook
+    -#     Sign in using Facebook
+    -#   %a.btn.btn-block.btn-social.btn-google.btn-flat{:href => "#"}
+    -#     %i.fa.fa-google-plus
+    -#     Sign in using Google+
+    -# / /.social-auth-links
+    -# %a{:href => "#"} I forgot my password
+    -# %br
+    -#   %a.text-center{:href => "register.html"} Register a new membership
+  / /.login-box-body
+/ /.login-box
+/ jQuery 2.1.4
+%script{:src => "../../plugins/jQuery/jQuery-2.1.4.min.js"}
+/ Bootstrap 3.3.5
+%script{:src => "../../bootstrap/js/bootstrap.min.js"}
+/ iCheck
+%script{:src => "../../plugins/iCheck/icheck.min.js"}
+:javascript
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
