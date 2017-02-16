@@ -9,7 +9,7 @@
 			/ form start
 			%h3
 				Signup
-			= simple_form_for admin_videos_path do |f|
+			= simple_form_for [:admin, @video] do |f|
 				.input-container.validate
 					%label
 						Video Url
