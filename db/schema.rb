@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170210192534) do
+ActiveRecord::Schema.define(version: 20170220225810) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20170210192534) do
     t.string   "emoji_one"
     t.string   "emoji_two"
     t.string   "emoji_three"
+    t.string   "image"
   end
 
 end

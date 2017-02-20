@@ -38,7 +38,7 @@
                 %th Action
               - @videos.each do |video|
                 %tr
-                  %td= video.headline 
+                  %td= video.headline
                   %td= video.video_url
                   %td
                     %span= link_to "", edit_admin_video_path(video), class: 'btn fa fa-pencil'

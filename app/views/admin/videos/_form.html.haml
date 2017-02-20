@@ -24,6 +24,10 @@
 					= f.input_field :headline, placeholder: 'Headline'
 				.input-container.validate
 					%label
+						Still Image
+					= f.input :image, as: :file, placeholder: 'Image'
+				.input-container.validate
+					%label
 						Emoji 1
 					= f.input_field :emoji_one, placeholder: 'Emoji 1'
 				.input-container.validate
